@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>transparent Signup page</title>
+    <!-- <link rel="stylesheet" href="signup_page.css" /> -->
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #23242a;
+        background-image: url(signup_background_image.png);
+        background-size: cover;
+      }
+      .box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .login-form {
+        height: 600px;
+        width: 600px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+        padding-top: 60px;
+      }
+      .login h3 {
+        letter-spacing: 1px;
+        color: aquamarine;
+      }
+      input {
+        width: 200px;
+        margin-top: 20px;
+        background: transparent;
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 28px;
+        box-shadow: 0 0 4px #fff;
+      }
+      input[placeholder]:focus {
+        color: aqua;
+      }
+      .button input[type="submit"] {
+        padding: 5px 20px;
+        margin-top: 30px;
+        background: transparent;
+        border-radius: 30px;
+        box-shadow: 0 0 4p #fff;
+        cursor: pointer;
+        color: aquamarine;
+      }
+
+      ::placeholder {
+        color: white;
+      }
+
+      a {
+        letter-spacing: 1px;
+        color: aquamarine;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form  action="/signUp" method="POST">
+      <div class="box">
+        <div class="login-form">
+          <div class="login">
+            <h3>Signup</h3>
+          </div>
+          <input type="text" placeholder="First_name" required="required" name="first_name"/>
+          <input type="text" placeholder="Last_name" required="required" name="last_name"/>
+          <input type="email" placeholder="email_address" required="required" name="email"/>
+          <input type="tel" placeholder="phone_number" required="required" name="phone_number"/>
+          <input type="Password" placeholder="Password" required="required" name="password"/>
+          <!-- <input type="password" placeholder="Re-Enter-Password" required="required"> -->
+          <div class="button">
+            <input type="submit" value="Submit" />
+          </div>
+          <div class="message">
+            <a href="/">already have an acount?? Login</a>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!-- <div class="image">
+      <img src="signup_background_image.png" alt="japan 4k" />
+    </div> -->
+  </body>
+</html>
