@@ -5,7 +5,7 @@ const { signUp, login } = require("./Handlers");
 const app = express();
 const path = require("path");
 
-const port = 4000;
+const port = process.env.PORT || 4000;
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
